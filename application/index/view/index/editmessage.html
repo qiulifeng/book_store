@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>修改信息</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.css" >
+<script src="/mbook/public/static/JQM/jquery-1.11.1.min.js"></script>
+<script src="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<style type="text/css">
+
+li{
+   text-align: center;
+   list-style: none;
+}
+</style>
+
+<body>
+<div data-role="page" id="page1" style="background-image: url(/mbook/public/static/images/book5.jpg);background-size: 200% ;background-repeat: no-repeat; background-size: 100%">
+  <div data-role="header"> 
+    <h3 id="reg"><font color="black" style="font-size: 30px">修改信息</font></h3>
+  </div>
+  <ul>
+  <div data-role="content">
+    <form name="modifymessage" method="post" action="editmessagedo" data-ajax="false">
+     <div data-role="fieldcontain">
+        <label for="username" style="font-size: 25px"> 用户名 ： </label>
+        <input name="username" id="username"  value="{$xinxi['user_name']}" type="text" required style="font-size: 25px">
+      </div>
+      <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup" data-type="horizontal"  >
+        <legend style="font-size: 25px">性别 :</legend>
+        <label for="male" style="font-size: 25px">男</label>
+        <input type="radio" name="gender" id="male" value="男"{if($xinxi['user_sex']=='男')}checked{/if}>
+        <label for="female" style="font-size: 25px">女</label>
+        <input type="radio" name="gender" id="female" value="女"{if($xinxi['user_sex']=='女')}checked{/if}>
+      </fieldset>
+      </div>
+      <div data-role="fieldcontain">
+        <label for="email" style="font-size: 25px"> 邮箱 ： </label>
+        <input name="email" id="email"  value="{$xinxi['user_email']}" type="email" style="font-size: 25px">
+      </div>
+      <div >
+        <input data-inline="true" type="submit" name="submit" value="提交"  />
+        <a data-inline="true" data-ajax="false" data-role="button" href="../index/message"> <font color="red">取消 </font></a> 
+      </div>
+    </form>
+
+  </ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>用户注册</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.css" >
+<script src="/mbook/public/static/JQM/jquery-1.11.1.min.js"></script>
+<script src="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<style type="text/css">
+label{
+    color: white;
+}
+li{
+  list-style: none;
+  color: white;
+  text-align: center;
+}
+
+</style>
+<body>
+<div data-role="page" id="page1" style="background-image: url(/mbook/public/static/images/book4.jpg);; background-repeat: no-repeat; background-size: 200%">
+  <div data-role="centent" align="right"> 
+    <a href="../Index/index.html" data-ajax="false" data-role="button" data-icon="home"><font color="black" size="3px">首页</font></a>
+    <h3 id="reg"> <font color="white" style="font-size: 30px" >用户注册 </font></h3>
+  </div>
+  <ul>
+  <div data-role="content">
+    <form name="RegForm" method="post" action="insert2" data-ajax="false">
+      <div data-role="fieldcontain">
+        <label for="username" style="font-size: 23px" align="center"> 用户名 </label>
+        <input name="username" id="username"  placeholder="xxx" value="" type="text" required style="font-size: 23px">
+      </div>
+      <div data-role="fieldcontain">
+        <label for="password" style="font-size: 23px" > 密码 </label>
+        <input name="password" id="password" placeholder="123" value="" type="password" required style="font-size: 23px">
+      </div>
+      <div data-role="fieldcontain">
+        <label for="repass" style="font-size: 23px" align="center"> 确认密码 </label>
+        <input name="repass" id="repass"  placeholder="记住你的密码" value="" type="password" required style="font-size: 23px">
+      </div>
+      
+     
+      <div align="center">
+        <input data-inline="true" type="submit" name="submit" value="注册"  />
+       <a data-inline="true" data-ajax="false" data-role="button"   href="../index/login">
+        <font color="black">登录</font></a> 
+      </div>
+    </form>
+    <h1><li>机电书店</li></h1>
+  </div>
+  </ul>
+
+</div>
+</body>
+</html>
